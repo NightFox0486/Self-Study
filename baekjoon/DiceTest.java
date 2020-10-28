@@ -33,6 +33,7 @@ public class DiceTest {
 
         }
         System.out.println("총 경우의 수 : " + totalCnt);
+        sc.close();
 
     }
 
