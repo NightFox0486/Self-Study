@@ -3,21 +3,30 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.StringTokenizer;
+import java.util.ArrayList;
 
-public class FindPrime {
+public class b2581 {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        StringTokenizer st;
-        int cnt = 0;
-        int n = Integer.parseInt(bf.readLine());
-        st = new StringTokenizer(bf.readLine());
-        for (int i = 0; i < n; i++) {
-            if (isPrime(Integer.parseInt(st.nextToken())))
-                cnt++;
+        int M = Integer.parseInt(bf.readLine());
+        int N = Integer.parseInt(bf.readLine());
+        ArrayList<Integer> arr = new ArrayList<Integer>();
+        for (int i = M; i <= N; i++) {
+            if (isPrime(i)) {
+                arr.add(i);
+            }
         }
-        bw.write(Integer.toString(cnt));
+        if (arr.isEmpty()) {
+            bw.write("-1");
+        } else {
+            int sum = 0;
+            for (int i = 0; i < arr.size(); i++) {
+                sum += arr.get(i);
+            }
+            bw.write(Integer.toString(sum) + "\n");
+            bw.write(Integer.toString(arr.get(0)));
+        }
         bw.flush();
         bw.close();
     }
