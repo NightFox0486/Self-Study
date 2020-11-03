@@ -19,25 +19,28 @@ public class b1002 {
             int x2 = Integer.parseInt(st.nextToken());
             int y2 = Integer.parseInt(st.nextToken());
             int r2 = Integer.parseInt(st.nextToken());
-            int pointdistance = (int) Math.sqrt(Math.pow(Math.abs((double) x1 - (double) x2), 2)
+            double pointdistance = Math.sqrt(Math.pow(Math.abs((double) x1 - (double) x2), 2)
                     + Math.pow(Math.abs((double) y1 - (double) y2), 2));
-            int radiusdistance = (int) Math.abs((double) r1 + (double) r2);
+            double radiusdistance = Math.abs((double) r1 + (double) r2);
+            double radiusdifference = Math.abs((double) r1 - (double) r2);
             if (pointdistance == 0) {
-                if (r1 == r2) {
+                if (r1 == r2)
                     bw.write("-1\n");
-                    break;
-                }
-                if (radiusdistance == 0)
-                    bw.write("1\n");
                 else
                     bw.write("0\n");
             } else {
                 if (pointdistance > radiusdistance)
                     bw.write("0\n");
-                else if (pointdistance < radiusdistance)
-                    bw.write("2\n");
-                else
+                else if (pointdistance == radiusdistance)
                     bw.write("1\n");
+                else {
+                    if (radiusdifference == pointdistance)
+                        bw.write("1\n");
+                    else if (pointdistance + r1 < r2 || r1 > r2 + pointdistance)
+                        bw.write("0\n");
+                    else
+                        bw.write("2\n");
+                }
             }
         }
         bw.flush();
