@@ -45,7 +45,7 @@ public class b1018 {
                         cnt1++;
                 }
                 // 시작이 흑색인 부분 서치
-                if ((i + j) % 2 == 1) {
+                if ((i + j) % 2 == 0) {
                     if (arr[i][j] == 'W')
                         cnt2++;
                 } else {
