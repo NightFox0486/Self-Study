@@ -22,13 +22,13 @@ public class b7568 {
             for (int j = 0; j < N; j++) {
                 if (j == i)
                     continue;
-                if (arr[i][0] <= arr[j][0] && arr[i][1] <= arr[j][1]) {
+                if (arr[j][0] > arr[i][0] && arr[j][1] > arr[i][1]) {
                     arr[i][2]++;
                 }
             }
         }
         for (int i = 0; i < N; i++) {
-            bw.write(Integer.toString(arr[i][2]) + " ");
+            bw.write(arr[i][2] + " ");
         }
         bw.flush();
         bw.close();
