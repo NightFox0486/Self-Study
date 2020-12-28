@@ -1,6 +1,9 @@
-N = int(input())
-arr = []
+import sys
+N = int(sys.stdin.readline())
+arr = [0]*10001
 for i in range(N):
-    arr.append(int(input()))
-for i in range(N):
-    print(arr[i])
+    arr[int(sys.stdin.readline())] += 1
+for i in range(10001):
+    while arr[i] != 0:
+        arr[i] -= 1
+        print(i)
