@@ -1,23 +1,18 @@
 import sys
+from collections import Counter
 N = int(sys.stdin.readline())
 arr = []
-dic = {}
-arr1 = set()
 for i in range(N):
     arr.append(int(sys.stdin.readline()))
-    if dic.get(arr[i]) == None:
-        dic[arr[i]] = 1
-    else:
-        dic[arr[i]] += 1
-for i in arr:
-    if dic.get(i) == max(dic.values()):
-        arr1.add(i)
 arr.sort()
+most = Counter(arr).most_common()
 print(round(sum(arr)/N))
-print(arr[int(N/2)])
-if len(arr1) >= 2:
-    arr1.remove(min(arr1))
-    print(min(arr1))
+print(arr[N//2])
+if len(most) > 1:
+    if most[0][1] == most[1][1]:
+        print(most[1][0])
+    else:
+        print(most[0][0])
 else:
-    print(arr1.pop())
-print(arr[0]-arr[N-1])
+    print(most[0][0])
+print(arr[N-1]-arr[0])
