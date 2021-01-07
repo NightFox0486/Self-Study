@@ -8,9 +8,14 @@ def findans(idx):
         print()
         return
     for i in range(1, N+1):
+        if check[i]:
+            continue
+        for j in range(1, i):
+            check[j] = True
         arr[idx] = i
         findans(idx+1)
-        check[i] = True
+        for j in range(1, i):
+            check[j] = False
 
 
 N, M = list(map(int, sys.stdin.readline().split()))
