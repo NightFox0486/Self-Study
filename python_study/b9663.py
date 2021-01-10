@@ -13,12 +13,18 @@ def findans(idx, n_q, count):
                 for y in range(idx):
                     if (i == x or j == y or (abs(i-x) == abs(y-j))):
                         check[x][y] = True
-            findans(idx, n_q + 1, count)
+            sumcnt = 0
             for k in range(idx):
-                if sum(sum(check[k])) == idx*idx:
-                    for x in range(idx):
-                        for y in range(idx):
-                            check[x][y] = False
+                sumcnt += sum(check[k])
+            if sumcnt == idx*idx:
+                print('max')
+                for x in range(idx):
+                    for y in range(idx):
+                        check[x][y] = False
+                return -1
+            a = findans(idx, n_q + 1, count)
+            if a == -1:
+                continue
 
 
 N = int(sys.stdin.readline())
