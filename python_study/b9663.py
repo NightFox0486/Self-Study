@@ -4,7 +4,7 @@ import sys
 def findans(idx, n_q):
     global count, arr, arr1
     for i in range(idx):
-        if idx == 1 and i > 0:
+        if n_q == 1 and i != 0:
             return
         for j in range(idx):
             if check[i][j]:
