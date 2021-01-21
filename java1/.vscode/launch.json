@@ -1,0 +1,672 @@
+{
+    // IntelliSense를 사용하여 가능한 특성에 대해 알아보세요.
+    // 기존 특성에 대한 설명을 보려면 가리킵니다.
+    // 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387을(를) 방문하세요.
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - CarTest2",
+            "request": "launch",
+            "mainClass": "ch6.CarTest2",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - CarTest3",
+            "request": "launch",
+            "mainClass": "ch6.CarTest3",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TvTest2",
+            "request": "launch",
+            "mainClass": "ch6.TvTest2",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TvTest",
+            "request": "launch",
+            "mainClass": "ch6.TvTest",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Hello<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "Hello",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ByteOverflow<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch2.ByteOverflow",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-CastingEx1<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch2.CastingEx1",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-CastingEx2<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch2.CastingEx2",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-CharToCode<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch2.CharToCode",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-CodeToChar<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch2.CodeToChar",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-PrecisionTest<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch2.PrecisionTest",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-SpecialChar<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch2.SpecialChar",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-StringTest<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch2.StringTest",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-OperatorEx1<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch3.OperatorEx1",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-OperatorEx10<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch3.OperatorEx10",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-OperatorEx11<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch3.OperatorEx11",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-OperatorEx12<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch3.OperatorEx12",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-OperatorEx13<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch3.OperatorEx13",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-OperatorEx14<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch3.OperatorEx14",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-OperatorEx15<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch3.OperatorEx15",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-OperatorEx16<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch3.OperatorEx16",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-OperatorEx17<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch3.OperatorEx17",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-OperatorEx18<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch3.OperatorEx18",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-OperatorEx19<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch3.OperatorEx19",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-OperatorEx2<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch3.OperatorEx2",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-OperatorEx20<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch3.OperatorEx20",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-OperatorEx21<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch3.OperatorEx21",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-OperatorEx22<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch3.OperatorEx22",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-OperatorEx23<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch3.OperatorEx23",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-OperatorEx24<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch3.OperatorEx24",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-OperatorEx25<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch3.OperatorEx25",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-OperatorEx26<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch3.OperatorEx26",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-OperatorEx27<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch3.OperatorEx27",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-OperatorEx3<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch3.OperatorEx3",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-OperatorEx4<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch3.OperatorEx4",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-OperatorEx5<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch3.OperatorEx5",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-OperatorEx6<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch3.OperatorEx6",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-OperatorEx7<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch3.OperatorEx7",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-OperatorEx8<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch3.OperatorEx8",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-OperatorEx9<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch3.OperatorEx9",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Exercise4_10<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.Exercise4_10",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Exercise4_11<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.Exercise4_11",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Exercise4_12<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.Exercise4_12",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Exercise4_13<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.Exercise4_13",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Exercise4_14<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.Exercise4_14",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Exercise4_15<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.Exercise4_15",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Exercise4_2<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.Exercise4_2",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Exercise4_3<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.Exercise4_3",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Exercise4_4<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.Exercise4_4",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Exercise4_5<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.Exercise4_5",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Exercise4_6<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.Exercise4_6",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Exercise4_7<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.Exercise4_7",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Exercise4_8<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.Exercise4_8",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Exercise4_9<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.Exercise4_9",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FlowEx1<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.FlowEx1",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FlowEx10<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.FlowEx10",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FlowEx11<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.FlowEx11",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FlowEx12<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.FlowEx12",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FlowEx13<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.FlowEx13",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FlowEx14<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.FlowEx14",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FlowEx15<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.FlowEx15",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FlowEx16<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.FlowEx16",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FlowEx17<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.FlowEx17",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FlowEx18<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.FlowEx18",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FlowEx19<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.FlowEx19",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FlowEx2<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.FlowEx2",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FlowEx20<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.FlowEx20",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FlowEx21<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.FlowEx21",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FlowEx22<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.FlowEx22",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FlowEx23<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.FlowEx23",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FlowEx24<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.FlowEx24",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FlowEx25<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.FlowEx25",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FlowEx26<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.FlowEx26",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FlowEx27<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.FlowEx27",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FlowEx3<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.FlowEx3",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FlowEx4<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.FlowEx4",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FlowEx5<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.FlowEx5",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FlowEx6<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.FlowEx6",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FlowEx7<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.FlowEx7",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FlowEx8<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.FlowEx8",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FlowEx9<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch4.FlowEx9",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ArrayEx1<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch5.ArrayEx1",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ArrayEx10<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch5.ArrayEx10",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ArrayEx11<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch5.ArrayEx11",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ArrayEx12<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch5.ArrayEx12",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ArrayEx13<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch5.ArrayEx13",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ArrayEx2<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch5.ArrayEx2",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ArrayEx3<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch5.ArrayEx3",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ArrayEx4<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch5.ArrayEx4",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ArrayEx6<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch5.ArrayEx6",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ArrayEx7<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch5.ArrayEx7",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ArrayEx8<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch5.ArrayEx8",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ArrayEx9<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch5.ArrayEx9",
+            "projectName": "java1_c6910a89"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MorseConverter<java1_c6910a89>",
+            "request": "launch",
+            "mainClass": "ch5.MorseConverter",
+            "projectName": "java1_c6910a89"
+        }
+    ]
+}
