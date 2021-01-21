@@ -1,8 +1,7 @@
 #include <iostream>
 using namespace std;
-
 int main(){
-    char a='b',b='c',c=a;
-    cout << a << b << 'c';
+    double weight;
+    cin >> weight;
+    cout << weight*35273.92 << endl;
 }
- 
