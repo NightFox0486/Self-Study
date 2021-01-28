@@ -42,7 +42,10 @@
 *.out
 *.app
 # Unix Executables
-[^\.]*
+#[^\.]*
+*
+!/**/
+!*.*
 
 ### Java ###
 # Compiled class file
