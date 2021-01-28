@@ -41,6 +41,7 @@
 *.exe
 *.out
 *.app
+*.exec
 
 ### Java ###
 # Compiled class file
