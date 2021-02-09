@@ -2,13 +2,14 @@
 #include <cstdlib>
 using namespace std;
 
-int main(){
+int main()
+{
     cout << "Hello Out There!\n";
     exit(1);
 
     cout << "This statement is poingless,\n"
-    << "because it will never be executed.\n"
-    << "This is just a toy program to illustrate exit.\n";
+         << "because it will never be executed.\n"
+         << "This is just a toy program to illustrate exit.\n";
 
     return 0;
 }
