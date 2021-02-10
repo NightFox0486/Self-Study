@@ -3,11 +3,12 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     int month, day;
     cout << "Welcome to your friendly weather program.\n"
-    << "Enter today's date as two integers for the month " <<
-    "and the day:\n";
+         << "Enter today's date as two integers for the month "
+         << "and the day:\n";
 
     cin >> month;
     cin >> day;
@@ -15,8 +16,9 @@ int main(){
     int prediction;
     char ans;
     cout << "Weather for today:\n";
-    do{
-        prediction = rand()%3;
+    do
+    {
+        prediction = rand() % 3;
         switch (prediction)
         {
         case 0:
@@ -30,10 +32,10 @@ int main(){
         case 2:
             cout << "The day will be stormy!!\n";
             break;
-        
+
         default:
-            cout << "Weather program is not " <<
-            "functionng properly.\n";
+            cout << "Weather program is not "
+                 << "functionng properly.\n";
         }
         cout << "What the weather for the next day? (y/n): ";
         cin >> ans;
