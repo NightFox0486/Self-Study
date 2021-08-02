@@ -1,4 +1,4 @@
-import test.test1;
+//import test.test1;
 
 public class HelloWorld {
   public static void main(String[] args) {
@@ -15,6 +15,6 @@ public class HelloWorld {
       test[i] = "testcase" + i;
       System.out.println(num[i] + " " + test[i]);
     }
-    test1 mytest1 = new test1();
+    // test1 mytest1 = new test1();
   }
 }
