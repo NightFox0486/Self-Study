@@ -2,17 +2,14 @@
 
 public class exam {
     public static void main(String[] args) {
-        String[] table = { "SI JAVA JAVASCRIPT SQL PYTHON C#", "CONTENTS JAVASCRIPT JAVA PYTHON SQL C++",
-                "HARDWARE C C++ PYTHON JAVA JAVASCRIPT", "PORTAL JAVA JAVASCRIPT PYTHON KOTLIN PHP",
-                "GAME C++ C# JAVASCRIPT C JAVA" };
-        String[] languages = { "JAVA", "JAVASCRIPT" };
-        int[] preference = { 7, 5 };
-        String answer = solution(table, languages, preference);
-        System.out.println(answer);
+        System.out.println("2222");
+        solution(1, 2, 3);
     }
 
-    private static String solution(String[] table, String[] languages, int[] preference) {
-        return null;
+    static String solution(int day, int width, int blocks) {
+        String answer = "dd";
+        System.out.println("sefsef");
+        return answer;
     }
 
     // static String solution(String[] table, String[] languages, int[] preference)
