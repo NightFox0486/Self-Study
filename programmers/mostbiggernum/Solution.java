@@ -1,7 +1,10 @@
+package mostbiggernum;
+
 class Solution {
     public String solution(int[] numbers) {
         String answer = "";
-        numbers = quicksort(numbers, 0, numbers.length);
+        quicksort(numbers, 0, numbers.length - 1);
+        // sort(numbers);
         StringBuffer sbf = new StringBuffer();
         for (int i = 0; i < numbers.length; i++) {
             if (numbers[0] == 0) {
@@ -24,7 +27,7 @@ class Solution {
         return value;
     }
 
-    private boolean sortindcator(int num1, int num2, int index) {
+    private boolean sortindicator(int num1, int num2, int index) {
         String str1 = Integer.toString(num1);
         String str2 = Integer.toString(num2);
         int src1 = getNextNum(str1, index);
@@ -38,25 +41,24 @@ class Solution {
             if ((index >= str1.length()) && (index >= str2.length())) { // 둘다 마지막 자리수일경우;
                 return true;
             }
-            return sortindcator(num1, num2, ++index);
+            return sortindicator(num1, num2, ++index);
         }
     }
 
-    private int[] sort(int[] numbers) {
+    private void sort(int[] numbers) {
         int temp;
         for (int i = 0; i < numbers.length - 1; i++) {
             for (int j = 1 + i; j < numbers.length; j++) {
-                if (sortindcator1(numbers[i], numbers[j], 0)) {
+                if (sortindicator1(numbers[i], numbers[j], 0)) {
                     temp = numbers[i];
                     numbers[i] = numbers[j];
                     numbers[j] = temp;
                 }
             }
         }
-        return numbers;
     }
 
-    private boolean sortindcator1(int num1, int num2, int index) {
+    private boolean sortindicator1(int num1, int num2, int index) {
         String str1 = Integer.toString(num1);
         String str2 = Integer.toString(num2);
         int i = (str1 + str2).compareTo(str2 + str1);
@@ -68,15 +70,41 @@ class Solution {
     }
 
     private void quicksort(int[] numbers, int left, int right) {
-        int pi = partition(left, right, numbers);
-    }
-
-    private int partition(int left, int right, int[] numbers) {
-        int pi = (left + right) / 2;
-        int pv = numbers[pi];
-        for (int i = left; i < right; i++) {
-
+        int pi, newpi;
+        if (left < right) {
+            pi = (left + right) / 2;
+            newpi = partition(numbers, left, right, pi);
+            if (left < newpi - 1) {
+                quicksort(numbers, left, newpi - 1);
+            }
+            if (newpi + 1 < right) {
+                quicksort(numbers, newpi + 1, right);
+            }
         }
-        return pi;
+
     }
+
+    private int partition(int[] numbers, int left, int right, int pi) {
+        int temp;
+        int pv;
+        int si, i;
+        pv = numbers[pi];
+        temp = numbers[pi];
+        numbers[pi] = numbers[right];
+        numbers[right] = temp;
+        si = left;
+        for (i = left; i <= right - 1; i++) {
+            if (sortindicator(pv, numbers[i], 0)) {
+                temp = numbers[i];
+                numbers[i] = numbers[si];
+                numbers[si] = temp;
+                si++;
+            }
+        }
+        temp = numbers[si];
+        numbers[si] = numbers[right];
+        numbers[right] = temp;
+        return si;
+    }
+
 }
