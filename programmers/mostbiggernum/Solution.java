@@ -45,29 +45,29 @@ class Solution {
         }
     }
 
-    private void sort(int[] numbers) {
-        int temp;
-        for (int i = 0; i < numbers.length - 1; i++) {
-            for (int j = 1 + i; j < numbers.length; j++) {
-                if (sortindicator1(numbers[i], numbers[j], 0)) {
-                    temp = numbers[i];
-                    numbers[i] = numbers[j];
-                    numbers[j] = temp;
-                }
-            }
-        }
-    }
+    // private void sort(int[] numbers) {
+    // int temp;
+    // for (int i = 0; i < numbers.length - 1; i++) {
+    // for (int j = 1 + i; j < numbers.length; j++) {
+    // if (sortindicator1(numbers[i], numbers[j], 0)) {
+    // temp = numbers[i];
+    // numbers[i] = numbers[j];
+    // numbers[j] = temp;
+    // }
+    // }
+    // }
+    // }
 
-    private boolean sortindicator1(int num1, int num2, int index) {
-        String str1 = Integer.toString(num1);
-        String str2 = Integer.toString(num2);
-        int i = (str1 + str2).compareTo(str2 + str1);
-        if (i < 0) {
-            return true;
-        } else {
-            return false;
-        }
-    }
+    // private boolean sortindicator1(int num1, int num2, int index) {
+    // String str1 = Integer.toString(num1);
+    // String str2 = Integer.toString(num2);
+    // int i = (str1 + str2).compareTo(str2 + str1);
+    // if (i < 0) {
+    // return true;
+    // } else {
+    // return false;
+    // }
+    // }
 
     private void quicksort(int[] numbers, int left, int right) {
         int pi, newpi;
