@@ -5,7 +5,7 @@ import java.util.Map.Entry;
 
 class Solution {
     public int[] solution(String[] genres, int[] plays) {
-        int[] answer = {};
+        int[] answer;
         Song[] songs = new Song[genres.length];
         for (int i = 0; i < songs.length; i++) {
             songs[i] = new Song(genres[i], plays[i]);
@@ -31,7 +31,42 @@ class Solution {
             }
 
         });
-        System.out.println(list);
+        HashMap<String, Integer> hashgenre = new HashMap<>(); /////////// 장르 우선순위 설정 //////
+        for (int i = 0; i < songs.length; i++) {
+            if (hashgenre.containsKey(songs[i].genre)) {
+                hashgenre.put(songs[i].genre, hashgenre.get(songs[i].genre) + songs[i].plays);
+            } else {
+                hashgenre.put(songs[i].genre, songs[i].plays);
+            }
+        }
+
+        ArrayList<Map.Entry<String, Integer>> genrelist = new ArrayList<>(hashgenre.entrySet());
+        Collections.sort(genrelist, new Comparator<Map.Entry<String, Integer>>() {
+
+            @Override
+            public int compare(Entry<String, Integer> o1, Entry<String, Integer> o2) {
+                return o2.getValue().intValue() - o1.getValue().intValue();
+            }
+
+        });//////////////////////////////////////////////////////////////////////////////////////
+           // System.out.println(genrelist);
+           // System.out.println(list);
+
+        List<Integer> answerlist = new ArrayList<>();
+        int cnt = 0;
+        for (int i = 0; i < genrelist.size(); i++) {
+            for (int j = 0; j < list.size(); j++) {
+                if (genrelist.get(i).getKey().equals(list.get(j).getValue().genre) && (cnt < 2)) {
+                    answerlist.add(list.get(j).getKey().intValue());
+                    cnt++;
+                }
+            }
+            cnt = 0;
+        }
+        answer = new int[answerlist.size()];
+        for (int i = 0; i < answerlist.size(); i++) {
+            answer[i] = answerlist.get(i);
+        }
         return answer;
     }
 
