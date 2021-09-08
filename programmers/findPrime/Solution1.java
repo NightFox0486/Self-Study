@@ -3,20 +3,17 @@ package findPrime;
 import java.util.*;
 
 class Solution1 {
-    private static int cnt = 0;
     private static String[] map;
     private static String[] result;
     private static boolean[] visit;
     private static HashSet<Integer> list;
 
     public int solution(String numbers) {
-        int answer = 0;
-
         visit = new boolean[numbers.length()];
         map = new String[numbers.length()];
         map = numbers.split("");
 
-        list = new HashSet();
+        list = new HashSet<Integer>();
 
         for (int i = 1; i <= numbers.length(); i++) {
             result = new String[i];

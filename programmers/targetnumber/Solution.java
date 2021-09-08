@@ -4,40 +4,25 @@ class Solution {
     public int solution(int[] numbers, int target) {
         int answer = 0;
         int sum = 0;
-        for (int i = 0; i < numbers.length; i++) { ///////// -의 개수별로 탐색 : i는 -개수
-            for (int j = 0; j < i; j++) {
-                sum += (-1) * j * numbers[i];
-            }
-        }
+        answer += substream(numbers, true, 0, sum, target) + substream(numbers, false, 0, sum, target);
         return answer;
     }
+
+    private int substream(int[] numbers, boolean flag, int index, int sum, int target) {
+        if (flag)
+            sum += numbers[index];
+        else
+            sum -= numbers[index];
+        if (index == numbers.length - 1) {
+            if (sum == target)
+                return 1;
+            else
+                return 0;
+        }
+        int temp = 0;
+        index++;
+        temp += substream(numbers, true, index, sum, target);
+        temp += substream(numbers, false, index, sum, target);
+        return temp;
+    }
 }
-
-// 2^n개의 경우의수
-// 12345
-// -1-2-3-4-5
-
-// - 0 1
-// 12345
-
-// -1 n
-// -12345
-// 1-2345
-// 12-345
-// 123-45
-// 1234-5
-
-// -2 2n
-// -1-2345
-// -12-345
-// -123-45
-// -1234-5
-
-// 1-2-345
-// 1-23-45
-// 1-234-5
-
-// 12-3-45
-// 12-34-5
-
-// 123-4-5
