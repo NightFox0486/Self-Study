@@ -54,11 +54,14 @@ class Solution {
 
     private String convertInttotime(int time) {
         StringBuilder sb = new StringBuilder();
-        sb.append(Integer.toString(time / 3600).format("%02d", time / 3600));
+        Integer.toString(time / 3600);
+        sb.append(String.format("%02d", time / 3600));
         time -= (time / 3600) * 3600;
-        sb.append(":" + Integer.toString(time / 60).format("%02d", time / 60));
+        Integer.toString(time / 60);
+        sb.append(":" + String.format("%02d", time / 60));
         time -= (time / 60) * 60;
-        sb.append(":" + Integer.toString(time).format("%02d", time));
+        Integer.toString(time);
+        sb.append(":" + String.format("%02d", time));
         return sb.toString();
     }
 }

@@ -6,7 +6,7 @@ class Solution {
     public int solution(int[] info, int[][] edges) throws InterruptedException {
         int answer = 0;
         boolean[] flag = new boolean[info.length];
-        ArrayList<Solution.Node> list = new ArrayList();
+        ArrayList<Solution.Node> list = new ArrayList<Solution.Node>();
         for (int i = 0; i < info.length; i++) {
             Node node = new Node(info[i], i);
             list.add(node);

@@ -26,7 +26,7 @@ class Solution {
                 inoutchecker.remove(parse[1]);
             }
         }
-        Iterator itr = inoutchecker.keySet().iterator();
+        Iterator<String> itr = inoutchecker.keySet().iterator();
         while (itr.hasNext()) {
             String getnext = (String) itr.next();
             if (eachTimetable.containsKey(getnext)) {
