@@ -6,6 +6,6 @@ public class main1 {
         int weight = 10;
         int[] truck_weights = { 7, 4, 5, 6 };
         Solution solution = new Solution();
-        solution.solution(bridge_length, weight, truck_weights);
+        System.out.println(solution.solution(bridge_length, weight, truck_weights));
     }
 }
