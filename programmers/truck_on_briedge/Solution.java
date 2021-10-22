@@ -11,6 +11,7 @@ class Solution {
                 answer += 1;
             }
             answer += bridge_length - 1;
+            i++;
         }
 
         return answer;
