@@ -1,18 +1,33 @@
 package truck_on_briedge;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
 class Solution {
     public int solution(int bridge_length, int weight, int[] truck_weights) {
         int answer = 0;
-        Queue<Integer> bridege = new LinkedList<Integer>();
         int current_weight = 0;
-        for (int i = 0; i < truck_weights[i]; i++) {
-            if (current_weight < weight) {
-                current_weight += truck_weights[i];
-                bridege.add(truck_weights[i]);
+        int i = 0;
+        int counter = 0;
+        int start = 0;
+        int end = 0;
+        boolean flag = true;
+        int[] cnt = new int[truck_weights.length];
+        while (flag) {
+            for (int j = start; j < end; j++) {
+                cnt[j]++;
+                if (cnt[j] == bridge_length) {
+                    current_weight -= truck_weights[j];
+                    start = j + 1;
+                    if (start == truck_weights.length) {
+                        flag = false;
+                        break;
+                    }
+                }
             }
+            if (i < truck_weights.length && current_weight + truck_weights[i] < weight) {
+                current_weight += truck_weights[i];
+                i++;
+                end = i;
+            }
+            counter++;
         }
         answer = counter;
 
@@ -20,7 +35,6 @@ class Solution {
     }
 }
 
-// 한트럭당 무조건 breidge_length 만큼 시간 소비
-// weight 여유가 있으면 다음 시간에 바로 다음트럭 출발
-// weight가 허용하는한 최대 동시 진행수는 breidge_length 만큼
-// 단위시간이랑 트럭번호랑 독립적으로 시행
+/*
+ * abstract 현재 트럭과 뒤에 트럭들의 합이 weight보다 작으면 weight안넘을때 까지만 동시 진행 간격당 시간 1추가
+ */
