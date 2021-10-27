@@ -22,7 +22,7 @@ class Solution {
                     }
                 }
             }
-            if (i < truck_weights.length && current_weight + truck_weights[i] < weight) {
+            if (i < truck_weights.length && current_weight + truck_weights[i] <= weight) {
                 current_weight += truck_weights[i];
                 i++;
                 end = i;
