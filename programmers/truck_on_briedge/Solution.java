@@ -14,6 +14,7 @@ class Solution {
                 bridege.add(truck_weights[i]);
             }
         }
+        answer = counter;
 
         return answer;
     }
