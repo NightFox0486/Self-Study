@@ -2,7 +2,7 @@ package stock_price;
 
 public class Main {
     public static void main(String[] args) {
-        int[] prices = { 1, 2, 3, 2, 3 };
+        int[] prices = { 5, 1, 8, 5, 2, 3, 2, 4 };
         int[] answer;
         Solution solution = new Solution();
         answer = solution.solution(prices);
