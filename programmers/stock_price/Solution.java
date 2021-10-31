@@ -7,9 +7,10 @@ class Solution {
             for (int j = i; j < prices.length; j++) {
                 if (prices[i] <= prices[j]) {
                     answer[i]++;
-                    if (prices[i] > prices[j])
-                        break;
+
                 }
+                if (prices[i] > prices[j])
+                    break;
             }
         }
         return answer;
