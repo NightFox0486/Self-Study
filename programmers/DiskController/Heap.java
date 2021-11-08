@@ -17,11 +17,14 @@ public class Heap<T> {
 
     public T pop() {
         T value = null;
-        if (size == 1) {
+        if (this.size == 1) {
             value = root.getValue();
             this.root = null;
+        } else {
+            root.getLeft().setRight(root.getRight());
+            this.root = root.getLeft();
         }
-
+        this.size--;
         return value;
     }
 
