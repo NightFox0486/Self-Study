@@ -1,43 +1,45 @@
 package DiskController;
 
 public class Heap<T> {
-    private Object[] list = new Object[DEFAULT_SIZE];
-    private int size = 0;
+    private Object[] list;
+    private int size;
     private static final int DEFAULT_SIZE = 100;
+
+    Heap() {
+        this.list = new Object[DEFAULT_SIZE];
+        this.size = 0;
+    }
 
     Heap(int size) {
         this.list = new Object[size];
+        this.size = 0;
     }
 
     public void push(T value) {
-        Node<T> node = new Node<T>(value);
-        if (this.isEmpty()) {
-            this.root = node;
-        } else {
 
-        }
         this.size++;
 
     }
 
     public T pop() {
-        T value = null;
-        if (this.size == 1) {
-            value = root.getValue();
-            this.root = null;
-        } else {
-            root.getLeft().setRight(root.getRight());
-            this.root = root.getLeft();
-        }
-        this.size--;
-        return value;
+
+        return list[0];
     }
 
     public boolean isEmpty() {
-        if (this.size == 0)
-            return true;
-        else
-            return false;
+        return this.size == 0;
+    }
+
+    private int getParent(int index) {
+        return index / 2;
+    }
+
+    private int getLeft(int index) {
+        return index * 2;
+    }
+
+    private int getRight(int index) {
+        return index * 2 + 1;
     }
 }
 
