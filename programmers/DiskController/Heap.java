@@ -1,8 +1,13 @@
 package DiskController;
 
 public class Heap<T> {
-    private Node<T> root = null;
+    private Object[] list = new Object[DEFAULT_SIZE];
     private int size = 0;
+    private static final int DEFAULT_SIZE = 100;
+
+    Heap(int size) {
+        this.list = new Object[size];
+    }
 
     public void push(T value) {
         Node<T> node = new Node<T>(value);
@@ -36,34 +41,34 @@ public class Heap<T> {
     }
 }
 
-class Node<E> {
-    private E value;
-    private Node<E> left;
-    private Node<E> right;
+// class Node<E> {
+// private E value;
+// private Node<E> left;
+// private Node<E> right;
 
-    Node(E value) {
-        this.value = value;
-        this.left = null;
-        this.right = null;
-    }
+// Node(E value) {
+// this.value = value;
+// this.left = null;
+// this.right = null;
+// }
 
-    public Node<E> getLeft() {
-        return this.left;
-    }
+// public Node<E> getLeft() {
+// return this.left;
+// }
 
-    public Node<E> getRight() {
-        return this.right;
-    }
+// public Node<E> getRight() {
+// return this.right;
+// }
 
-    public void setLeft(Node<E> node) {
-        this.left = node;
-    }
+// public void setLeft(Node<E> node) {
+// this.left = node;
+// }
 
-    public void setRight(Node<E> node) {
-        this.right = node;
-    }
+// public void setRight(Node<E> node) {
+// this.right = node;
+// }
 
-    public E getValue() {
-        return this.value;
-    }
-}
+// public E getValue() {
+// return this.value;
+// }
+// }
