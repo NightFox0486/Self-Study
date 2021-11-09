@@ -1,14 +1,8 @@
 package DiskController;
 
-public class Heap<T> {
+public class Heap<T> implements Comparable<Heap> {
     private Object[] list;
     private int size;
-    private static final int DEFAULT_SIZE = 100;
-
-    Heap() {
-        this.list = new Object[DEFAULT_SIZE];
-        this.size = 0;
-    }
 
     Heap(int size) {
         this.list = new Object[size];
@@ -16,14 +10,14 @@ public class Heap<T> {
     }
 
     public void push(T value) {
-
+        this.list[size] = value;
         this.size++;
 
     }
 
-    public T pop() {
+    public Object pop() {
 
-        return list[0];
+        return this.list[0];
     }
 
     public boolean isEmpty() {
@@ -41,6 +35,13 @@ public class Heap<T> {
     private int getRight(int index) {
         return index * 2 + 1;
     }
+
+    @Override
+    public int compareTo(Heap o) {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
 }
 
 // class Node<E> {
