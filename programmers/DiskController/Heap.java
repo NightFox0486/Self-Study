@@ -25,14 +25,35 @@ public class Heap<E> {
     }
 
     public E pop() {
-        E value = (E)this.list[1];
-        this.list[1]=this.list[this.size];
-        Comparable<E> comp = (Comparable<E>)this.list[this.getLeft(1)];
-        while()
-        if(comp.compareTo((E)this.list[this.getRight(1)])>=0){
+        E value = (E) this.list[1];
+        this.list[1] = this.list[this.size];
+        this.list[this.size] = null;
+        Comparable<E> comp = (Comparable<E>) this.list[1];
+        int idx = 1;
+        this.size--;
+        while (idx >= 1) {
+            int leftidx = getLeft(idx);
+            int rightidx = getRight(idx);
+            if (leftidx > size || rightidx > size) {
+                break;
+            }
+            Object leftVal = this.list[leftidx];
+            Object rightVal = this.list[rightidx];
+            if (((Comparable<E>) leftVal).compareTo((E) rightVal) > 0) {
+                if (comp.compareTo((E) rightVal) > 0) {
+                    this.list[idx] = rightVal;
+                    idx = rightidx;
+                    this.list[idx] = comp;
+                }
+            } else {
+                if (comp.compareTo((E) leftVal) > 0) {
+                    this.list[idx] = leftVal;
+                    idx = leftidx;
+                    this.list[idx] = comp;
+                }
+            }
 
         }
-        this.size--;
         return value;
     }
 
