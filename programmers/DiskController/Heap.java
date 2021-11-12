@@ -1,6 +1,8 @@
 package DiskController;
 
-public class Heap<E> {
+import java.util.Comparator;
+
+public class Heap<E> implements Comparator<E> {
     private Object[] list;
     private int size;
 
@@ -72,6 +74,12 @@ public class Heap<E> {
     private int getRight(int index) {
         return index * 2 + 1;
     }
+
+    @Override
+    public int compare(E o1, E o2) {
+        return o1 - o2;
+    }
+
 }
 
 // class Node<E> {
