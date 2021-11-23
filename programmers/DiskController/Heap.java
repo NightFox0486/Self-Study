@@ -26,6 +26,21 @@ public class Heap<E> implements Comparator<E> {
         this.size++;
     }
 
+    public void push(E value, Comparator comp) {
+        E comp1 = value;
+        int idx = size + 1;
+        while (idx > 1) {
+            int parent = getParent(idx);
+            Object parentVal = list[parent];
+            if (comp.compare((E) value, (E) parentVal) >= 0)
+                break;
+            list[idx] = parentVal;
+            idx = parent;
+        }
+        list[idx] = comp1;
+        this.size++;
+    }
+
     public E pop() {
         E value = (E) this.list[1];
         this.list[1] = this.list[this.size];
@@ -59,6 +74,40 @@ public class Heap<E> implements Comparator<E> {
         return value;
     }
 
+    public E pop(Comparator comp) {
+        E value = (E) this.list[1];
+        this.list[1] = this.list[this.size];
+        E comp1 = (E) this.list[1];
+        this.list[this.size] = null;
+        // Comparable<E> comp = (Comparable<E>) this.list[1];
+        int idx = 1;
+        this.size--;
+        while (idx >= 1) {
+            int leftidx = getLeft(idx);
+            int rightidx = getRight(idx);
+            if (leftidx > size || rightidx > size) {
+                break;
+            }
+            Object leftVal = this.list[leftidx];
+            Object rightVal = this.list[rightidx];
+            if (comp.compare((E) leftVal, (E) rightVal) > 0) {
+                if (comp.compare(this.list[1], (E) rightVal) > 0) {
+                    this.list[idx] = rightVal;
+                    idx = rightidx;
+                    this.list[idx] = comp1;
+                }
+            } else {
+                if (comp.compare(this.list[1], (E) leftVal) > 0) {
+                    this.list[idx] = leftVal;
+                    idx = leftidx;
+                    this.list[idx] = comp1;
+                }
+            }
+
+        }
+        return value;
+    }
+
     public boolean isEmpty() {
         return this.size == 0;
     }
@@ -77,7 +126,7 @@ public class Heap<E> implements Comparator<E> {
 
     @Override
     public int compare(E o1, E o2) {
-        return o1 - o2;
+        return 0;
     }
 
 }
