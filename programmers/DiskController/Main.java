@@ -2,8 +2,8 @@ package DiskController;
 
 public class Main {
     public static void main(String[] args) {
-        int[][] jobs = { { 0, 3 }, { 1, 9 }, { 3, 2 }, { 2, 6 } };
+        int[][] jobs = { { 0, 10 }, { 2, 10 }, { 9, 10 }, { 15, 2 } };
         Solution solution = new Solution();
-        solution.solution(jobs);
+        System.out.println(solution.solution(jobs));
     }
 }
