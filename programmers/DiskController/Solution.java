@@ -28,18 +28,17 @@ class Solution {
 
         });
         int j = 0;
-        for (int i = 0; i < jobs.length; i++) {
-            while (total_time <= jobs[j][0]) {
+        for (int i = 0; !hp.isEmpty() || j < jobs.length; i++) {
+            while (j < jobs.length && total_time >= jobs[j][0] || j == 0) {
                 hp.push(jobs[j], comp);
-                if (j < jobs.length)
-                    j++;
+                j++;
             }
-            while (!hp.isEmpty()) {
-                int[] sample = hp.pop(comp);
-                total_time += sample[1];
-                answer += total_time - sample[0] + sample[1];
-                System.out.println(answer);
-            }
+            // while (!hp.isEmpty()) {
+            int[] sample = hp.pop(comp);
+            answer += total_time - sample[0] + sample[1];
+            System.out.println(answer);
+            total_time += sample[1];
+            // }
         }
 
         answer /= jobs.length;
