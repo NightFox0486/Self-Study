@@ -33,12 +33,21 @@ class Solution {
                 hp.push(jobs[j], comp);
                 j++;
             }
-            // while (!hp.isEmpty()) {
-            int[] sample = hp.pop(comp);
-            answer += total_time - sample[0] + sample[1];
-            System.out.println(answer);
-            total_time += sample[1];
-            // }
+            if (hp.isEmpty() && j < jobs.length) {
+                hp.push(jobs[j], comp);
+                j++;
+            }
+            if (!hp.isEmpty()) {
+                int[] sample = hp.pop(comp);
+                if (i == 0 && sample[0] != 0)
+                    total_time += sample[0];
+                if (sample[0] > total_time)
+                    answer += sample[1];
+                else
+                    answer += total_time - sample[0] + sample[1];
+                // System.out.println(answer);
+                total_time += sample[1];
+            }
         }
 
         answer /= jobs.length;
