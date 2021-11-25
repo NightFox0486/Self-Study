@@ -28,10 +28,11 @@ class Solution {
 
         });
         int j = 0;
-        for (int i = 0; !hp.isEmpty() || j < jobs.length; i++) {
-            while (j < jobs.length && total_time >= jobs[j][0] || j == 0) {
+        for (int i = 0; i < jobs.length; i++) {
+            while (total_time <= jobs[j][0]) {
                 hp.push(jobs[j], comp);
-                j++;
+                if (j < jobs.length)
+                    j++;
             }
             // while (!hp.isEmpty()) {
             int[] sample = hp.pop(comp);
