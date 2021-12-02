@@ -2,7 +2,7 @@ package DiskController;
 
 import java.util.Comparator;
 
-public class Heap<E> implements Comparator<E> {
+public class Heap<T> implements Comparator<T> {
     private Object[] list;
     private int size;
 
@@ -11,13 +11,13 @@ public class Heap<E> implements Comparator<E> {
         this.size = 0;
     }
 
-    public void push(E value) {
-        Comparable<E> comp = (Comparable<E>) value;
+    public void push(T value) {
+        Comparable<T> comp = (Comparable<T>) value;
         int idx = size + 1;
         while (idx > 1) {
             int parent = getParent(idx);
             Object parentVal = list[parent];
-            if (comp.compareTo((E) parentVal) >= 0)
+            if (comp.compareTo((T) parentVal) >= 0)
                 break;
             list[idx] = parentVal;
             idx = parent;
@@ -26,13 +26,13 @@ public class Heap<E> implements Comparator<E> {
         this.size++;
     }
 
-    public void push(E value, Comparator comp) {
-        E comp1 = value;
+    public void push(T value, Comparator comp) {
+        T comp1 = value;
         int idx = size + 1;
         while (idx > 1) {
             int parent = getParent(idx);
             Object parentVal = list[parent];
-            if (comp.compare((E) value, (E) parentVal) >= 0)
+            if (comp.compare((T) value, (T) parentVal) >= 0)
                 break;
             list[idx] = parentVal;
             idx = parent;
@@ -41,11 +41,11 @@ public class Heap<E> implements Comparator<E> {
         this.size++;
     }
 
-    public E pop() {
-        E value = (E) this.list[1];
+    public T pop() {
+        T value = (T) this.list[1];
         this.list[1] = this.list[this.size];
         this.list[this.size] = null;
-        Comparable<E> comp = (Comparable<E>) this.list[1];
+        Comparable<T> comp = (Comparable<T>) this.list[1];
         int idx = 1;
         this.size--;
         while (idx >= 1) {
@@ -56,14 +56,14 @@ public class Heap<E> implements Comparator<E> {
             }
             Object leftVal = this.list[leftidx];
             Object rightVal = this.list[rightidx];
-            if (((Comparable<E>) leftVal).compareTo((E) rightVal) > 0) {
-                if (comp.compareTo((E) rightVal) > 0) {
+            if (((Comparable<T>) leftVal).compareTo((T) rightVal) > 0) {
+                if (comp.compareTo((T) rightVal) > 0) {
                     this.list[idx] = rightVal;
                     idx = rightidx;
                     this.list[idx] = comp;
                 }
             } else {
-                if (comp.compareTo((E) leftVal) > 0) {
+                if (comp.compareTo((T) leftVal) > 0) {
                     this.list[idx] = leftVal;
                     idx = leftidx;
                     this.list[idx] = comp;
@@ -74,10 +74,10 @@ public class Heap<E> implements Comparator<E> {
         return value;
     }
 
-    public E pop(Comparator comp) {
-        E value = (E) this.list[1];
+    public T pop(Comparator comp) {
+        T value = (T) this.list[1];
         this.list[1] = this.list[this.size];
-        E comp1 = (E) this.list[1];
+        T comp1 = (T) this.list[1];
         this.list[this.size] = null;
         // Comparable<E> comp = (Comparable<E>) this.list[1];
         int idx = 1;
@@ -90,14 +90,14 @@ public class Heap<E> implements Comparator<E> {
             }
             Object leftVal = this.list[leftidx];
             Object rightVal = this.list[rightidx];
-            if (comp.compare((E) leftVal, (E) rightVal) > 0) {
-                if (comp.compare(this.list[1], (E) rightVal) > 0) {
+            if (comp.compare((T) leftVal, (T) rightVal) > 0) {
+                if (comp.compare(comp1, (T) rightVal) > 0) {
                     this.list[idx] = rightVal;
                     idx = rightidx;
                     this.list[idx] = comp1;
                 }
             } else {
-                if (comp.compare(this.list[1], (E) leftVal) > 0) {
+                if (comp.compare(comp1, (T) leftVal) > 0) {
                     this.list[idx] = leftVal;
                     idx = leftidx;
                     this.list[idx] = comp1;
@@ -125,7 +125,7 @@ public class Heap<E> implements Comparator<E> {
     }
 
     @Override
-    public int compare(E o1, E o2) {
+    public int compare(T o1, T o2) {
         return 0;
     }
 
