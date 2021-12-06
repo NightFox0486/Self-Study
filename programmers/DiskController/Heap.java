@@ -32,7 +32,7 @@ public class Heap<T> implements Comparator<T> {
         while (idx > 1) {
             int parent = getParent(idx);
             Object parentVal = list[parent];
-            if (comp.compare((T) value, (T) parentVal) >= 0)
+            if (comp.compare((T) comp1, (T) parentVal) >= 0)
                 break;
             list[idx] = parentVal;
             idx = parent;
@@ -95,12 +95,16 @@ public class Heap<T> implements Comparator<T> {
                     this.list[idx] = rightVal;
                     idx = rightidx;
                     this.list[idx] = comp1;
+                } else {
+                    break;
                 }
             } else {
                 if (comp.compare(comp1, (T) leftVal) > 0) {
                     this.list[idx] = leftVal;
                     idx = leftidx;
                     this.list[idx] = comp1;
+                } else {
+                    break;
                 }
             }
 
