@@ -1,3 +1,5 @@
+package python.k6;
+
 import java.time.DateTimeException;
 import java.time.LocalTime;
 import java.util.StringTokenizer;

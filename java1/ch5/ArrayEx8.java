@@ -1,4 +1,4 @@
-package ch5;
+package java1.ch5;
 
 public class ArrayEx8 {
     public static void main(String[] args) {

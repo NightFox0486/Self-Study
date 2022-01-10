@@ -1,3 +1,5 @@
+package python.k1;
+
 class Solution {
     public String solution(String new_id) {
         String answer = "";

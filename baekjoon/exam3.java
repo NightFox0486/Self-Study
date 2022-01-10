@@ -1,3 +1,5 @@
+package baekjoon;
+
 import java.util.StringTokenizer;
 
 public class exam3 {

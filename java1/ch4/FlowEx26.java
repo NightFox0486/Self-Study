@@ -1,4 +1,4 @@
-package ch4;
+package java1.ch4;
 
 public class FlowEx26 {
     public static void main(String[] args) {

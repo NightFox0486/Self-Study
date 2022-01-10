@@ -1,4 +1,4 @@
-package ch6;
+package java1.ch6;
 
 public class PowerTest {
     public static void main(String[] args) {

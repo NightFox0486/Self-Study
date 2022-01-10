@@ -1,4 +1,4 @@
-package ch2;
+package java1.ch2;
 
 public class CastingEx2 {
     public static void main(String[] args) {

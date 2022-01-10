@@ -1,6 +1,4 @@
-package ch6;
-
-import javafx.css.converter.BooleanConverter;
+package java1.ch6;
 
 class SutdaCard {
     int num;

@@ -1,4 +1,4 @@
-package ch6;
+package java1.ch6;
 
 class Document {
     static int count = 0;

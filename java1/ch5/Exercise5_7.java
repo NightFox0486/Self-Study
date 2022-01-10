@@ -1,4 +1,4 @@
-package ch5;
+package java1.ch5;
 
 public class Exercise5_7 {
     public static void main(String[] args) {

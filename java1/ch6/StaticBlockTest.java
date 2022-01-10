@@ -1,4 +1,4 @@
-package ch6;
+package java1.ch6;
 
 public class StaticBlockTest {
     static int[] arr = new int[10];

@@ -1,4 +1,4 @@
-package ch6;
+package java1.ch6;
 
 public class FactorialTest {
     public static void main(String[] args) {

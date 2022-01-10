@@ -1,3 +1,5 @@
+package java;
+
 //import test.test1;
 
 public class HelloWorld {

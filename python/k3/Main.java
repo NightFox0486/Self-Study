@@ -1,3 +1,5 @@
+package python.k3;
+
 public class Main {
     public static void main(String[] args) {
         String[] info = { "java backend junior pizza 150", "python frontend senior chicken 210",

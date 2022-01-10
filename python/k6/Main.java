@@ -1,3 +1,5 @@
+package python.k6;
+
 public class Main {
     public static void main(String[] args) {
         String play_time = "02:03:55";
