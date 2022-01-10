@@ -3,7 +3,6 @@ package DiskController;
 import java.util.Arrays;
 import java.util.Comparator;
 
-//commit test
 class Solution {
     public int solution(int[][] jobs) {
         int answer = 0;
