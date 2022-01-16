@@ -250,6 +250,7 @@ dmypy.json
 
 ### Windows ###
 # Windows thumbnail cache files
+settings.json
 Thumbs.db
 Thumbs.db:encryptable
 ehthumbs.db
