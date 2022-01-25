@@ -12,13 +12,14 @@ public class b15656 {
     public static int M;
     public static int[] input;
     public static int[] ans;
+    public static StringBuilder sb;
 
     public static void recur(int cur) {
         if (cur == M) {
             for (int i = 0; i < M; i++) {
-                System.out.print(ans[i] + " ");
+                sb.append(ans[i] + " ");
             }
-            System.out.println();
+            sb.append("\n");
 
             return;
         }
@@ -32,6 +33,7 @@ public class b15656 {
         System.setIn(new FileInputStream("baekjoon/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
+        sb = new StringBuilder();
         N = Integer.parseInt(st.nextToken());
         M = Integer.parseInt(st.nextToken());
         input = new int[N];
@@ -42,5 +44,6 @@ public class b15656 {
         }
         Arrays.sort(input);
         recur(0);
+        System.out.println(sb);
     }
 }
