@@ -9,7 +9,7 @@ public class b1407 {
     static long recur(long input, long N) {
         if (N == 0)
             return input / 1 - input / 2;
-        return recur(input, N - 1) + (1 << N) * ((input / (1 << N)) - (input / (1 << (N + 1))));
+        return recur(input, N - 1) + (((long) 1 << N) * ((input / ((long) 1 << N)) - (input / ((long) 1 << (N + 1)))));
     }
 
     static long fx(long input) {
@@ -23,7 +23,7 @@ public class b1407 {
             input /= 2;
             N++;
         }
-        return recur(inputN, N - 1) + (1 << N) * (inputN / (1 << N));
+        return recur(inputN, N - 1) + (((long) 1 << N) * (inputN / ((long) 1 << N)));
     }
 
     public static void main(String[] args) throws IOException {
