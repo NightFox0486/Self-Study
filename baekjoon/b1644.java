@@ -3,6 +3,8 @@ package baekjoon;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 
 public class b1644 {
     public static void main(String[] args) throws IOException {
@@ -20,42 +22,32 @@ public class b1644 {
         }
         for (int i = 2; i < N + 1; i++) {
             if (arr[i] == false) {
-                for (int j = i + 1; j < N + 1; j++) {
-                    if (arr[j] == true)
-                        continue;
-                    if (j % i == 0) {
-                        arr[j] = true;
-                        prime_cnt++;
-                    }
+                for (int j = 2 * i; j < N + 1; j += i) {
+                    arr[j] = true;
                 }
             }
         }
-        prime_cnt = N + 1 - prime_cnt;
-        int[] primenum = new int[prime_cnt];
-        prime_cnt = 0;
+        List<Integer> primenum = new ArrayList<>();
         for (int i = 2; i < N + 1; i++) {
             if (arr[i] == false) {
-                primenum[prime_cnt] = i;
-                prime_cnt++;
+                primenum.add(i);
             }
         }
+        prime_cnt = primenum.size();
         while (e < N) {
             if (sum == N) {
                 cnt++;
                 if (e == prime_cnt - 1)
                     break;
-                sum += primenum[++e];
+                sum += primenum.get(++e);
             } else if (sum > N) {
-                sum -= primenum[s++];
+                sum -= primenum.get(s++);
             } else {
                 if (e == prime_cnt - 1)
                     break;
-                sum += primenum[++e];
+                sum += primenum.get(++e);
             }
         }
-        // for (int i = 0; i < N + 1; i++) {
-        // System.out.println(arr[i] + ":" + i + "--" + prime_cnt);
-        // }
         System.out.println(cnt);
     }
 }
