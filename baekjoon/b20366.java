@@ -11,15 +11,21 @@ public class b20366 {
     static int[] output;
     static boolean[] selected;
     static int N;
+    static int cnt = 0;
 
-    static void recur(int cur) {
-        if (cur == 0) {
-
+    static void recur(int cur, int start, int sum) {
+        if (cur == 2) {
+            output[cnt] = sum;
+            cnt++;
+            return;
         }
-        for (int i = 0; i < N; i++) {
-
+        for (int i = start; i < N; i++) {
+            if (selected[i])
+                continue;
+            selected[i] = true;
+            recur(cur + 1, i + 1, sum + arr[i]);
+            selected[i] = false;
         }
-        recur(cur + 1);
 
     }
 
@@ -34,7 +40,7 @@ public class b20366 {
         for (int i = 0; i < N; i++) {
             arr[i] = Integer.parseInt(st.nextToken());
         }
-        recur(0);
+        recur(0, 0, 0);
         Arrays.sort(output);
         int s = 0;
         int e = 2;
