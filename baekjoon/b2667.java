@@ -5,8 +5,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.LinkedList;
-import java.util.Queue;
+// import java.util.LinkedList;
+import java.util.Stack;
 
 class Point {
     int x;
@@ -28,13 +28,13 @@ public class b2667 {
     static ArrayList<Integer> al = new ArrayList<>();
     static int cnt = 0;
 
-    public static void bfs(Point p) {
-        Queue<Point> queue = new LinkedList<>();
+    public static void dfs(Point p) {
+        Stack<Point> stack = new Stack<>();
         int tempcnt = 0;
-        queue.add(p);
+        stack.add(p);
         check[p.x][p.y] = true;
-        while (!queue.isEmpty()) {
-            Point current = queue.poll();
+        while (!stack.isEmpty()) {
+            Point current = stack.pop();
             tempcnt++;
             for (int i = 0; i < 4; i++) {
                 int sx = current.x + dy[i];
@@ -43,12 +43,34 @@ public class b2667 {
                     continue;
                 if (!check[sx][sy] && map[sx][sy] == 1) {
                     check[sx][sy] = true;
-                    queue.add(new Point(sx, sy));
+                    stack.add(new Point(sx, sy));
                 }
             }
         }
         al.add(tempcnt);
     }
+
+    // public static void bfs(Point p) {
+    // Queue<Point> queue = new LinkedList<>();
+    // int tempcnt = 0;
+    // queue.add(p);
+    // check[p.x][p.y] = true;
+    // while (!queue.isEmpty()) {
+    // Point current = queue.poll();
+    // tempcnt++;
+    // for (int i = 0; i < 4; i++) {
+    // int sx = current.x + dy[i];
+    // int sy = current.y + dx[i];
+    // if (sx > N - 1 || sy > N - 1 || sx < 0 || sy < 0)
+    // continue;
+    // if (!check[sx][sy] && map[sx][sy] == 1) {
+    // check[sx][sy] = true;
+    // queue.add(new Point(sx, sy));
+    // }
+    // }
+    // }
+    // al.add(tempcnt);
+    // }
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -64,7 +86,7 @@ public class b2667 {
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
                 if (map[i][j] == 1 && !check[i][j]) {
-                    bfs(new Point(i, j));
+                    dfs(new Point(i, j));
                 }
             }
         }
