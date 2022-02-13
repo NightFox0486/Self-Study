@@ -20,18 +20,33 @@ public class b1654 {
             sum += arr[i];
         }
         ans = sum / N;
-        for (int i = ans; true; i--) {
+        int start = 0;
+        int end = ans;
+        for (int i = start; i < end; i++) {
             cnt = 0;
-            for (int j = 0; j < N; j++) {
-                cnt += arr[j] / i;
-            }
+            int x = (start + end) / 2;
+
+            for (int j = 0; j < N; j++)
+                cnt += arr[j] / x;
+
             if (cnt < K)
-                continue;
-            else {
-                ans = i;
-                break;
-            }
+                start = x;
+            else
+                end = x;
+
         }
+        // for (int i = ans; true; i--) {
+        // cnt = 0;
+        // for (int j = 0; j < N; j++) {
+        // cnt += arr[j] / i;
+        // }
+        // if (cnt < K)
+        // continue;
+        // else {
+        // ans = i;
+        // break;
+        // }
+        // }
         System.out.println(ans);
     }
 }
