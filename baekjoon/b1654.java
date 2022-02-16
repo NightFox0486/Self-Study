@@ -11,42 +11,34 @@ public class b1654 {
         StringTokenizer st = new StringTokenizer(br.readLine());
         int N = Integer.parseInt(st.nextToken());
         int K = Integer.parseInt(st.nextToken());
-        int[] arr = new int[N];
-        int sum = 0;
-        int ans = 0;
-        int cnt = 0;
+        long[] arr = new long[N];
+        long sum = 0;
+        long ans = 0;
+        long cnt = 0;
         for (int i = 0; i < N; i++) {
             arr[i] = Integer.parseInt(br.readLine());
             sum += arr[i];
         }
         ans = sum / N;
-        int start = 0;
-        int end = ans;
-        for (int i = start; i < end; i++) {
+        long start = 0;
+        long end = ans;
+        while (true) {
+            if (start == end) {
+                ans = start;
+                break;
+            }
             cnt = 0;
-            int x = (start + end) / 2;
-
-            for (int j = 0; j < N; j++)
-                cnt += arr[j] / x;
-
-            if (cnt < K)
-                start = x;
-            else
+            long x = (start + end) / 2;
+            for (int i = 0; i < N; i++) {
+                cnt += arr[i] / x;
+            }
+            if (cnt < K) {
                 end = x;
+            } else {
+                start = x;
 
+            }
         }
-        // for (int i = ans; true; i--) {
-        // cnt = 0;
-        // for (int j = 0; j < N; j++) {
-        // cnt += arr[j] / i;
-        // }
-        // if (cnt < K)
-        // continue;
-        // else {
-        // ans = i;
-        // break;
-        // }
-        // }
         System.out.println(ans);
     }
 }
