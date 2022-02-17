@@ -13,17 +13,26 @@ public class b1074 {
     static void recur(int N, int start_x, int start_y) {
         if (N == 1) {
             arr[start_x][start_y] = cnt++;
-            arr[start_x][start_y + 1] = cnt++;
-            arr[start_x + 1][start_y] = cnt++;
-            arr[start_x + 1][start_y + 1] = cnt++;
+            arr[start_x][start_y + N] = cnt++;
+            arr[start_x + N][start_y] = cnt++;
+            arr[start_x + N][start_y + N] = cnt++;
             return;
         }
-
-        recur(N / 2, N / 2, N / 2);
-        recur(N / 2, N / 2, 1 << (N - 1));
-        recur(N / 2, 1 << (N - 1), N / 2);
-        recur(N / 2, 1 << (N - 1), 1 << (N - 1));
-
+        if (R < (1 << (N / 2)) && C < (1 << (N / 2))) {
+            recur(N - 1, start_x, start_y);
+        }
+        if (R < (1 << (N / 2)) && C >= (1 << (N / 2))) {
+            cnt += (1 << N);
+            recur(N - 1, start_x, start_y + (1 << (N - 1)));
+        }
+        if (R >= (1 << (N / 2)) && C < (1 << (N / 2))) {
+            cnt += (1 << N) * 2;
+            recur(N - 1, start_x + (1 << (N - 1)), start_y);
+        }
+        if (R >= (1 << (N / 2)) && C >= (1 << (N / 2))) {
+            cnt += (1 << N) * 3;
+            recur(N - 1, start_x + (1 << (N - 1)), start_y + (1 << (N - 1)));
+        }
     }
 
     public static void main(String[] args) throws IOException {
@@ -33,7 +42,7 @@ public class b1074 {
         R = Integer.parseInt(st.nextToken());
         C = Integer.parseInt(st.nextToken());
         arr = new int[1 << N][1 << N];
-        recur(N, 0, 0);
-        System.out.println();
+        recur(N, R, C);
+        System.out.println(arr[R][C]);
     }
 }
