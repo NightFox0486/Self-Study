@@ -6,9 +6,9 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class b1074 {
-    static int N, R, C;
+    static long N, R, C;
     // static int[][] arr;
-    static int cnt = 0;
+    static long cnt = 0;
 
     // static void recur(int N, int start_x, int start_y) {
     // if (N == 1) {
@@ -45,10 +45,10 @@ public class b1074 {
         int start_X = 0;
         int start_Y = 0;
         while (N != 1) {
-            int compare = 1 << (N - 1);
-            int compare2 = compare * compare;
-            int compare_X = compare + start_X;
-            int compare_Y = compare + start_Y;
+            long compare = 1 << (N - 1);
+            long compare2 = compare * compare;
+            long compare_X = compare + start_X;
+            long compare_Y = compare + start_Y;
             if (R < compare_X && C >= compare_Y) {
                 cnt += compare2;
                 start_Y += compare;
@@ -64,7 +64,7 @@ public class b1074 {
             }
             N--;
         }
-        int ans = cnt + (R - start_X) + (C - start_Y) + 1;
+        long ans = cnt + (R - start_X) + (C - start_Y) + 1;
         if (R % 2 == 0 && C % 2 == 0)
             ans--;
         // recur(N, 0, 0);
