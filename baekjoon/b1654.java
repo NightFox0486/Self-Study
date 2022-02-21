@@ -12,34 +12,28 @@ public class b1654 {
         int N = Integer.parseInt(st.nextToken());
         int K = Integer.parseInt(st.nextToken());
         long[] arr = new long[N];
-        long sum = 0;
+        long max = 0;
         long ans = 0;
         long cnt = 0;
         for (int i = 0; i < N; i++) {
             arr[i] = Integer.parseInt(br.readLine());
-            sum += arr[i];
+            max = Math.max(max, arr[i]);
         }
-        ans = sum / N;
-        long start = 0;
-        long end = ans;
-        while (true) {
-            if (start == end) {
-                ans = start;
-                break;
-            }
+        long start = 1;
+        long end = max;
+        while (start <= end) {
             cnt = 0;
             long x = (start + end) / 2;
             for (int i = 0; i < N; i++) {
                 cnt += arr[i] / x;
             }
             if (cnt < K) {
-                end = x;
+                end = x - 1;
             } else {
-                start = x;
-
+                start = x + 1;
             }
         }
-        System.out.println(ans);
+        System.out.println(end);
     }
 }
 
