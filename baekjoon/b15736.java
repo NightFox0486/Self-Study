@@ -6,17 +6,12 @@ public class b15736 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         long N = sc.nextInt();
-        long N2 = 1;
-        long sum = 0;
-        long ans = 1;
         long cnt = 1;
-        while (sum < N) {
-            N2 *= 2;
-            sum += N2;
-            sum += 1;
+        for (int i = 2; i <= N; i++) {
+            if (i * i > N)
+                break;
             cnt++;
         }
-        ans = cnt - 1;
-        System.out.println(ans);
+        System.out.println(cnt);
     }
 }
