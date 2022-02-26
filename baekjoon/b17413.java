@@ -5,33 +5,46 @@ import java.util.Scanner;
 public class b17413 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        StringBuilder sb = new StringBuilder();
+        StringBuilder braket = new StringBuilder();
         StringBuilder backup = new StringBuilder();
+        StringBuilder temp = new StringBuilder();
         StringBuilder output = new StringBuilder();
         boolean check = false;
         String input = sc.nextLine();
         for (int i = 0; i < input.length(); i++) {
             if (input.charAt(i) == '<') {
+                if (!backup.isEmpty()) {
+                    for (int j = backup.length() - 1; j >= 0; j--) {
+                        if (backup.charAt(j) == ' ')
+                            continue;
+                        temp.append(backup.charAt(j));
+                    }
+                    output.append(temp.toString());
+                    temp = new StringBuilder();
+                    backup = new StringBuilder();
+                }
                 check = true;
             }
             if (check) {
-                sb.append(input.charAt(i));
+                braket.append(input.charAt(i));
                 if (input.charAt(i) == '>') {
                     check = false;
                 }
-                output.append(sb.toString());
-                sb = new StringBuilder();
-            } else {
+                output.append(braket.toString());
+                braket = new StringBuilder();
+                continue;
+            }
+            if (!check) {
                 backup.append(input.charAt(i));
                 if (input.charAt(i) == ' ' || i == input.length() - 1) {
                     for (int j = backup.length() - 1; j >= 0; j--) {
                         if (backup.charAt(j) == ' ')
                             continue;
-                        sb.append(backup.charAt(j));
+                        temp.append(backup.charAt(j));
                     }
-                    output.append(sb.toString());
+                    output.append(temp.toString());
                     output.append(" ");
-                    sb = new StringBuilder();
+                    temp = new StringBuilder();
                     backup = new StringBuilder();
                 }
             }
