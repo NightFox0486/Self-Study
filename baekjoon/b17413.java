@@ -13,7 +13,7 @@ public class b17413 {
         String input = sc.nextLine();
         for (int i = 0; i < input.length(); i++) {
             if (input.charAt(i) == '<') {
-                if (backup.length() != 0)
+                if (backup.length() != 0) {
                     for (int j = backup.length() - 1; j >= 0; j--) {
                         if (backup.charAt(j) == ' ')
                             continue;
@@ -50,4 +50,5 @@ public class b17413 {
             }
         }
         System.out.println(output);
-    }}
+    }
+}
