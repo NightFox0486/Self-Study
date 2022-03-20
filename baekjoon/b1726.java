@@ -35,7 +35,6 @@ public class b1726 {
     static int ex;
     static int ey;
     static int ed;
-    static int min = Integer.MAX_VALUE;
 
     static void bfs(Position p) {
         Queue<Position> queue = new LinkedList<>();
@@ -43,33 +42,30 @@ public class b1726 {
         check[p.x][p.y][p.d] = true;
         while (!queue.isEmpty()) {
             Position current = queue.poll();
-            if (current.x == ex && current.y == ey) { // 도착지점 도착
-                if (ed != current.d) { // 방향 확인 후 조정
-                    if (dy[ed] == dy[current.d] || dx[ed] == dx[current.d])
-                        current.c += 2;
-                    else
-                        current.c += 1;
-                }
-                System.out.println("test");
-                min = Math.min(current.c, min);
+            if (current.x == ex && current.y == ey && current.d == ed) { // 도착지점 도착
+                System.out.println(current.c);
+                return;
             }
-            for (int i = 1; i <= 4; i++) {
-                int cost = 0;
-                int sx = current.x + dy[i];
-                int sy = current.y + dx[i];
-                if (sx < 0 || sy < 0 || sx > M - 1 || sy > N - 1 || map[sx][sy] == 1 || check[sx][sy][i])
+            for (int i = 1; i <= 3; i++) {
+                int sx = current.x + dy[current.d] * i;
+                int sy = current.y + dx[current.d] * i;
+                if (sx < 0 || sy < 0 || sx > M - 1 || sy > N - 1 || check[sx][sy][current.d])
                     continue;
-                if (i != current.d) { // 현재 방향에 따라 회전
-                    if (dy[i] == dy[current.d] || dx[i] == dx[current.d])
-                        cost += 2;
-                    else
-                        cost += 1;
+                if (map[sx][sy] == 1)
+                    break;
+                check[sx][sy][current.d] = true;
+                queue.add(new Position(sx, sy, current.d, current.c + 1));
+            }
+            for (int i = 1; i <= 4; i++) { // 현재 방향에 따라 회전
+                if (check[current.x][current.y][i])
+                    continue;
+                int cost = 0;
+                if (dy[i] == dy[current.d] || dx[i] == dx[current.d])
+                    cost += 2;
+                else
                     cost += 1;
-                }
-                check[sx][sy][i] = true;
-                queue.add(new Position(sx, sy, i, current.c + cost));
-                // check[current.x][current.y] = false;
-
+                check[current.x][current.y][i] = true;
+                queue.add(new Position(current.x, current.y, i, current.c + cost));
             }
         }
     }
@@ -96,6 +92,5 @@ public class b1726 {
         ey = Integer.parseInt(st.nextToken()) - 1;
         ed = Integer.parseInt(st.nextToken());
         bfs(new Position(sx, sy, sd, 0));
-        System.out.println(min);
     }
 }
