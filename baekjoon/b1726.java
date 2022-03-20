@@ -43,8 +43,8 @@ public class b1726 {
         check[p.x][p.y][p.d] = true;
         while (!queue.isEmpty()) {
             Position current = queue.poll();
-            if (current.x == ex && current.y == ey) {
-                if (ed != current.d) {
+            if (current.x == ex && current.y == ey) { // 도착지점 도착
+                if (ed != current.d) { // 방향 확인 후 조정
                     if (dy[ed] == dy[current.d] || dx[ed] == dx[current.d])
                         current.c += 2;
                     else
@@ -59,7 +59,7 @@ public class b1726 {
                 int sy = current.y + dx[i];
                 if (sx < 0 || sy < 0 || sx > M - 1 || sy > N - 1 || map[sx][sy] == 1 || check[sx][sy][i])
                     continue;
-                if (i != current.d) {
+                if (i != current.d) { // 현재 방향에 따라 회전
                     if (dy[i] == dy[current.d] || dx[i] == dx[current.d])
                         cost += 2;
                     else
