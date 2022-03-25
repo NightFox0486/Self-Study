@@ -1,4 +1,4 @@
-package stock_price;
+package programmers.stock_price;
 
 public class Main {
     public static void main(String[] args) {

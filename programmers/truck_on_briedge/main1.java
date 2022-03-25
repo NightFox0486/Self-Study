@@ -1,4 +1,4 @@
-package truck_on_briedge;
+package programmers.truck_on_briedge;
 
 public class main1 {
     public static void main(String[] args) {

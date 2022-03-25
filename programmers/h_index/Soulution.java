@@ -1,4 +1,4 @@
-package h_index;
+package programmers.h_index;
 
 import java.util.Arrays;
 import java.util.Comparator;

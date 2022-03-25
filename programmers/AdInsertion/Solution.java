@@ -1,4 +1,4 @@
-package AdInsertion;
+package programmers.AdInsertion;
 
 class Solution {
     public String solution(String play_time, String adv_time, String[] logs) {

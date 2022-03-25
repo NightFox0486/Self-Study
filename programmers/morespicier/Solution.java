@@ -1,4 +1,4 @@
-package morespicier;
+package programmers.morespicier;
 
 import java.util.PriorityQueue;
 

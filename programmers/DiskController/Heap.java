@@ -1,4 +1,4 @@
-package DiskController;
+package programmers.DiskController;
 
 import java.util.Comparator;
 

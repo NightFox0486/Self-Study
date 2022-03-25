@@ -1,4 +1,4 @@
-package h_index;
+package programmers.h_index;
 
 public class main1 {
     public static void main(String[] args) {

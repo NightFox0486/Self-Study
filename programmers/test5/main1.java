@@ -1,4 +1,4 @@
-package test5;
+package programmers.test5;
 
 public class main1 {
     public static void main(String[] args) throws InterruptedException {

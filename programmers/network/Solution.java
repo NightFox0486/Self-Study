@@ -1,4 +1,4 @@
-package network;
+package programmers.network;
 
 class Solution {
     public int solution(int n, int[][] computers) {

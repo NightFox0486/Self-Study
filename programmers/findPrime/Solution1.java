@@ -1,4 +1,4 @@
-package findPrime;
+package programmers.findPrime;
 
 import java.util.*;
 

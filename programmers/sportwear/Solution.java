@@ -1,4 +1,4 @@
-package sportwear;
+package programmers.sportwear;
 
 class Solution {
     public int solution(int n, int[] lost, int[] reserve) {

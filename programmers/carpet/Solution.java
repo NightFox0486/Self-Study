@@ -1,4 +1,4 @@
-package carpet;
+package programmers.carpet;
 
 class Solution {
     public int[] solution(int brown, int yellow) {

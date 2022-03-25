@@ -1,4 +1,4 @@
-package bestalbum;
+package programmers.bestalbum;
 
 import java.util.*;
 import java.util.Map.Entry;

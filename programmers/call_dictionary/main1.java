@@ -1,4 +1,4 @@
-package call_dictionary;
+package programmers.call_dictionary;
 
 public class main1 {
     public static void main(String[] args) {

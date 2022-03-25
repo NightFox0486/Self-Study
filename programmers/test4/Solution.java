@@ -1,4 +1,4 @@
-package test4;
+package programmers.test4;
 
 class Solution {
     public int[] solution(int n, int[] info) {

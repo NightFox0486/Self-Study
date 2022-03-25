@@ -1,4 +1,4 @@
-package targetnumber;
+package programmers.targetnumber;
 
 class Solution {
     public int solution(int[] numbers, int target) {

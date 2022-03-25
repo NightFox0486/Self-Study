@@ -1,4 +1,4 @@
-package mostbiggernum;
+package programmers.mostbiggernum;
 
 class Solution {
     public String solution(int[] numbers) {

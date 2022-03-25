@@ -1,4 +1,4 @@
-package printer;
+package programmers.printer;
 
 public class main1 {
     public static void main(String[] args) {

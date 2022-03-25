@@ -1,4 +1,4 @@
-package test2;
+package programmers.test2;
 
 class Solution {
     public int solution(int n, int k) {

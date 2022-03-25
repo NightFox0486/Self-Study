@@ -1,4 +1,4 @@
-package stock_price;
+package programmers.stock_price;
 
 class Solution {
     public int[] solution(int[] prices) {

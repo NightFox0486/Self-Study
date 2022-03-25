@@ -1,4 +1,4 @@
-package DiskController;
+package programmers.DiskController;
 
 public class Main {
     public static void main(String[] args) {

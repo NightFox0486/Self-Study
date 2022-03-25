@@ -1,4 +1,4 @@
-package test6;
+package programmers.test6;
 
 public class main1 {
     public static void main(String[] args) {

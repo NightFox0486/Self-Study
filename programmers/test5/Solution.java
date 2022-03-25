@@ -1,4 +1,4 @@
-package test5;
+package programmers.test5;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package truck_on_briedge;
+package programmers.truck_on_briedge;
 
 class Solution {
     public int solution(int bridge_length, int weight, int[] truck_weights) {

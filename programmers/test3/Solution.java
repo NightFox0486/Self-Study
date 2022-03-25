@@ -1,4 +1,4 @@
-package test3;
+package programmers.test3;
 
 import java.util.Arrays;
 import java.util.HashMap;
