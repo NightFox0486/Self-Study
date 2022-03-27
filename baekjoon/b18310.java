@@ -24,13 +24,13 @@ public class b18310 {
         int s = list.get(0);
         int e = list.get(N - 1);
         int d = (s + e) / 2;
-        for (int i = 0; i < N; i++) {
-            int temp = Math.abs(list.get(i) - d);
-            if (min > temp) {
-                min = temp;
-                index = list.get(i);
-            }
-        }
-        System.out.println(index);
+        // for (int i = 0; i < N; i++) {
+        // int temp = Math.abs(list.get(i) - d);
+        // if (min > temp) {
+        // min = temp;
+        // index = list.get(i);
+        // }
+        // }
+        System.out.println(list.get((N - 1) / 2));
     }
 }
