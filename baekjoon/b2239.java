@@ -3,9 +3,8 @@ package baekjoon;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.StringTokenizer;
 
-public class b2580 {
+public class b2239 {
     static int N = 9;
     static int[][] map = new int[N][N];
     static int[] dy = { 0, 1 };
@@ -15,7 +14,7 @@ public class b2580 {
         if (sum == 405 && x == N && y == 0) {
             for (int i = 0; i < N; i++) {
                 for (int j = 0; j < N; j++) {
-                    System.out.print(map[i][j] + " ");
+                    System.out.print(map[i][j]);
                 }
                 System.out.println();
             }
@@ -73,11 +72,10 @@ public class b2580 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st;
         for (int i = 0; i < N; i++) {
-            st = new StringTokenizer(br.readLine());
+            String temp = br.readLine();
             for (int j = 0; j < N; j++) {
-                map[i][j] = Integer.parseInt(st.nextToken());
+                map[i][j] = temp.charAt(j) - '0';
             }
         }
         solve(0, 0, 0);
