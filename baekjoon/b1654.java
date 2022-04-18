@@ -13,7 +13,6 @@ public class b1654 {
         int K = Integer.parseInt(st.nextToken());
         long[] arr = new long[N];
         long max = 0;
-        long ans = 0;
         long cnt = 0;
         for (int i = 0; i < N; i++) {
             arr[i] = Integer.parseInt(br.readLine());
