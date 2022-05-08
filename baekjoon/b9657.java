@@ -6,7 +6,7 @@ public class b9657 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
-        boolean[] dp = new boolean[N + 1];
+        boolean[] dp = new boolean[N + 5];
         dp[1] = true;
         dp[2] = false;
         dp[3] = true;
